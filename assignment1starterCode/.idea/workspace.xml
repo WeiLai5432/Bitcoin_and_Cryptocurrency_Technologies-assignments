@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aecb04bb-258d-4ff9-93f3-7312c81af9f2" name="Default" comment="add &quot;import&quot; file">
+    <list default="true" id="aecb04bb-258d-4ff9-93f3-7312c81af9f2" name="Default" comment="finish &quot;TxHandler.java&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/TxHandler.java" afterPath="$PROJECT_DIR$/TxHandler.java" />
     </list>
@@ -20,21 +20,26 @@
             <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Transaction.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="0">
-                    <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <state relative-caret-position="105">
+                    <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
                     <folding>
-                      <element signature="imports" expanded="true" />
+                      <element signature="class#Input#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
+                      <element signature="method#Input#0;class#Input#0;class#Transaction#0" expanded="false" />
                       <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
+                      <element signature="class#Output#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
+                      <element signature="method#Output#0;class#Output#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
                       <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
                       <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
                       <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
                       <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
+                      <element signature="method#removeInput#1;class#Transaction#0" expanded="false" />
+                      <element signature="method#getRawDataToSign#0;class#Transaction#0" expanded="false" />
                       <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
                       <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
                       <element signature="method#getInput#0;class#Transaction#0" expanded="false" />
@@ -52,44 +57,11 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="UTXO.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/UTXO.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="300">
-                    <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-                    <folding>
-                      <element signature="docComment;field#txHash#0;class#UTXO#0" expanded="false" />
-                      <element signature="docComment;field#index#0;class#UTXO#0" expanded="false" />
-                      <element signature="docComment;method#UTXO#0;class#UTXO#0" expanded="false" />
-                      <element signature="method#UTXO#0;class#UTXO#0" expanded="false" />
-                      <element signature="docComment;method#getTxHash#0;class#UTXO#0" expanded="false" />
-                      <element signature="e#625#626#0" expanded="true" />
-                      <element signature="e#654#655#0" expanded="true" />
-                      <element signature="docComment;method#getIndex#0;class#UTXO#0" expanded="false" />
-                      <element signature="docComment;method#equals#0;class#UTXO#0" expanded="false" />
-                      <element signature="method#equals#0;class#UTXO#0" expanded="false" />
-                      <element signature="docComment;method#hashCode#0;class#UTXO#0" expanded="false" />
-                      <element signature="method#hashCode#0;class#UTXO#0" expanded="false" />
-                      <element signature="docComment;method#compareTo#0;class#UTXO#0" expanded="false" />
-                      <element signature="method#compareTo#0;class#UTXO#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="3">
-      <content type="file-editors">
-        <state>
-          <leaf>
             <file leaf-file-name="UTXOPool.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/UTXOPool.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="75">
-                    <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+                  <state relative-caret-position="330">
+                    <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
                     <folding>
                       <element signature="docComment;field#H#0;class#UTXOPool#0" expanded="false" />
                       <element signature="docComment;method#UTXOPool#0;class#UTXOPool#0" expanded="false" />
@@ -99,6 +71,7 @@
                       <element signature="docComment;method#getTxOutput#0;class#UTXOPool#0" expanded="false" />
                       <element signature="docComment;method#contains#0;class#UTXOPool#0" expanded="false" />
                       <element signature="docComment;method#getAllUTXO#0;class#UTXOPool#0" expanded="false" />
+                      <element signature="method#getAllUTXO#0;class#UTXOPool#0" expanded="false" />
                     </folding>
                   </state>
                 </provider>
@@ -110,12 +83,22 @@
     </window>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="TxHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TxHandler.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            <state relative-caret-position="105">
+              <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Crypto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crypto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,8 +106,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <file leaf-file-name="TxHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TxHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UTXO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UTXO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -156,20 +151,11 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8563">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Crypto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crypto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding>
-                <element signature="docComment;method#verifySignature#0;class#Crypto#0" expanded="false" />
+                <marker date="1516192403704" expanded="true" signature="39606:39648" ph="..." />
+                <marker date="1516192403704" expanded="true" signature="39606:39679" ph="..." />
               </folding>
             </state>
           </provider>
@@ -180,6 +166,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sigData</find>
+      <find>rh</find>
+      <find>uxtoHashSet</find>
+      <find>UXTO</find>
+      <find>output</find>
+      <find>outputl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,13 +186,14 @@
       <list>
         <option value="$PROJECT_DIR$/Crypto.java" />
         <option value="$PROJECT_DIR$/Transaction.java" />
+        <option value="$PROJECT_DIR$/Main.java" />
         <option value="$PROJECT_DIR$/TxHandler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="23" />
+    <option name="x" value="20" />
+    <option name="y" value="32" />
     <option name="width" value="1260" />
     <option name="height" value="714" />
   </component>
@@ -237,9 +229,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -303,6 +295,21 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -371,40 +378,47 @@
       <option name="project" value="LOCAL" />
       <updated>1516094558008</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add &quot;import&quot; file">
+      <created>1516150973781</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1516150973781</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1260" height="714" extended-state="0" />
+    <frame x="20" y="32" width="1260" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3279483" sideWeight="0.49671593" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3424191" sideWeight="0.5032841" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3279483" sideWeight="0.49671593" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3424191" sideWeight="0.5032841" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.49671593" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25862068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922825" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.49671593" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26272577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922825" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -414,29 +428,14 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="finish isValidTx() and TxHandler()" />
     <MESSAGE value="add &quot;import&quot; file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;import&quot; file" />
+    <MESSAGE value="finish &quot;TxHandler.java&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish &quot;TxHandler.java&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/assignment1starterCode.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8563">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -461,20 +460,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crypto.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1516192403704" expanded="true" signature="39606:39648" ph="..." />
+            <marker date="1516192403704" expanded="true" signature="39606:39679" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../cryptocurrency-course-materials-master/assignment1/src/Crypto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/assignment1starterCode.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;method#verifySignature#0;class#Crypto#0" expanded="false" />
+            <marker date="1516192403704" expanded="true" signature="39606:39648" ph="..." />
+            <marker date="1516192403704" expanded="true" signature="39606:39679" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.java" />
+    <entry file="file://$PROJECT_DIR$/../../cryptocurrency-course-materials-master/assignment1/src/Crypto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../cryptocurrency-course-materials-master/assignment1/src/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
+            <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#removeInput#1;class#Transaction#0" expanded="false" />
+            <element signature="method#getRawDataToSign#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
+            <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getInput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../cryptocurrency-course-materials-master/assignment1/src/UTXO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="method#UTXO#0;class#UTXO#0" expanded="false" />
+            <element signature="e#625#626#0" expanded="false" />
+            <element signature="method#equals#0;class#UTXO#0" expanded="false" />
+            <element signature="method#hashCode#0;class#UTXO#0" expanded="false" />
+            <element signature="method#compareTo#0;class#UTXO#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../cryptocurrency-course-materials-master/assignment1/src/UTXOPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../cryptocurrency-course-materials-master/assignment1/src/TxHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crypto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UTXO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Input#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Output#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
+            <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#removeInput#1;class#Transaction#0" expanded="false" />
+            <element signature="method#getRawDataToSign#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
+            <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getInput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UTXOPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="330">
+          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding>
             <element signature="docComment;field#H#0;class#UTXOPool#0" expanded="false" />
             <element signature="docComment;method#UTXOPool#0;class#UTXOPool#0" expanded="false" />
@@ -484,62 +642,15 @@
             <element signature="docComment;method#getTxOutput#0;class#UTXOPool#0" expanded="false" />
             <element signature="docComment;method#contains#0;class#UTXOPool#0" expanded="false" />
             <element signature="docComment;method#getAllUTXO#0;class#UTXOPool#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UTXO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;field#txHash#0;class#UTXO#0" expanded="false" />
-            <element signature="docComment;field#index#0;class#UTXO#0" expanded="false" />
-            <element signature="docComment;method#UTXO#0;class#UTXO#0" expanded="false" />
-            <element signature="method#UTXO#0;class#UTXO#0" expanded="false" />
-            <element signature="docComment;method#getTxHash#0;class#UTXO#0" expanded="false" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="docComment;method#getIndex#0;class#UTXO#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#UTXO#0" expanded="false" />
-            <element signature="method#equals#0;class#UTXO#0" expanded="false" />
-            <element signature="docComment;method#hashCode#0;class#UTXO#0" expanded="false" />
-            <element signature="method#hashCode#0;class#UTXO#0" expanded="false" />
-            <element signature="docComment;method#compareTo#0;class#UTXO#0" expanded="false" />
-            <element signature="method#compareTo#0;class#UTXO#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
-            <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
-            <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getInput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getAllUTXO#0;class#UTXOPool#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TxHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="316">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
