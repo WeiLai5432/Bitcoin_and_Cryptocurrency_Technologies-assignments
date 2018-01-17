@@ -59,7 +59,7 @@ public class TxHandler {
             }
             totalOutput += tx.getOutput(i).value;
         }
-        return true;
+        return totalInput >= totalOutput;
     }
 
     /**
