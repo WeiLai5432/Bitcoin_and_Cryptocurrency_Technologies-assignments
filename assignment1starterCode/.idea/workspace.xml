@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aecb04bb-258d-4ff9-93f3-7312c81af9f2" name="Default" comment="first commit">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../READEME.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/assignment1starterCode.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assignment1.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Crypto.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Transaction.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/TxHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UTXO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UTXOPool.java" />
+    <list default="true" id="aecb04bb-258d-4ff9-93f3-7312c81af9f2" name="Default" comment="add &quot;import&quot; file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/TxHandler.java" afterPath="$PROJECT_DIR$/TxHandler.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,9 +20,10 @@
             <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Transaction.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="990">
-                    <caret line="91" column="21" lean-forward="true" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+                  <state relative-caret-position="0">
+                    <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                     <folding>
+                      <element signature="imports" expanded="true" />
                       <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
                       <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
@@ -64,8 +55,8 @@
             <file leaf-file-name="UTXO.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/UTXO.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="120">
-                    <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+                  <state relative-caret-position="300">
+                    <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
                     <folding>
                       <element signature="docComment;field#txHash#0;class#UTXO#0" expanded="false" />
                       <element signature="docComment;field#index#0;class#UTXO#0" expanded="false" />
@@ -97,8 +88,8 @@
             <file leaf-file-name="UTXOPool.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/UTXOPool.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="390">
-                    <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+                  <state relative-caret-position="75">
+                    <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
                     <folding>
                       <element signature="docComment;field#H#0;class#UTXOPool#0" expanded="false" />
                       <element signature="docComment;method#UTXOPool#0;class#UTXOPool#0" expanded="false" />
@@ -123,9 +114,11 @@
       <file leaf-file-name="TxHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TxHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="58" column="19" lean-forward="false" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="243">
+              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -371,6 +364,14 @@
       <option name="presentableId" value="Default" />
       <updated>1515767913597</updated>
     </task>
+    <task id="LOCAL-00001" summary="finish isValidTx() and TxHandler()">
+      <created>1516094558007</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1516094558008</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -379,7 +380,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.49671593" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3279483" sideWeight="0.49671593" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -411,7 +412,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="finish isValidTx() and TxHandler()" />
+    <MESSAGE value="add &quot;import&quot; file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;import&quot; file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -458,10 +461,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Crypto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;method#verifySignature#0;class#Crypto#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/UTXOPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        <state relative-caret-position="75">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
           <folding>
             <element signature="docComment;field#H#0;class#UTXOPool#0" expanded="false" />
             <element signature="docComment;method#UTXOPool#0;class#UTXOPool#0" expanded="false" />
@@ -475,34 +488,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="91" column="21" lean-forward="true" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
-          <folding>
-            <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
-            <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
-            <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getInput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UTXO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="300">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="docComment;field#txHash#0;class#UTXO#0" expanded="false" />
             <element signature="docComment;field#index#0;class#UTXO#0" expanded="false" />
@@ -522,21 +511,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crypto.java">
+    <entry file="file://$PROJECT_DIR$/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;method#verifySignature#0;class#Crypto#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
+            <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
+            <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getInput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TxHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="58" column="19" lean-forward="false" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="243">
+          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
