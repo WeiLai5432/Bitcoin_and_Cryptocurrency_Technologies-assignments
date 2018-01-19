@@ -4,6 +4,7 @@
     <list default="true" id="aecb04bb-258d-4ff9-93f3-7312c81af9f2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/MaxFeeTxHandler.java" afterPath="$PROJECT_DIR$/MaxFeeTxHandler.java" />
+      <change beforePath="$PROJECT_DIR$/TxHandler.java" afterPath="$PROJECT_DIR$/TxHandler.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,21 +37,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TxHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TxHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TxHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-989">
-              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="285">
+              <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaxFeeTxHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MaxFeeTxHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MaxFeeTxHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+            <state relative-caret-position="57">
+              <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,9 +87,9 @@
             <state relative-caret-position="-3678">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1516373807635" expanded="true" signature="36617:36634" ph="..." />
-                <marker date="1516373807635" expanded="true" signature="36617:36652" ph="..." />
-                <marker date="1516373807635" expanded="true" signature="36617:36665" ph="..." />
+                <marker date="1516375191543" expanded="true" signature="37786:37803" ph="..." />
+                <marker date="1516375191543" expanded="true" signature="37786:37821" ph="..." />
+                <marker date="1516375191543" expanded="true" signature="37786:37834" ph="..." />
               </folding>
             </state>
           </provider>
@@ -125,7 +128,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="102" />
     <option name="width" value="1260" />
     <option name="height" value="714" />
   </component>
@@ -338,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516246985137</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="edit &quot;MaxFeeTxHandler&quot;">
+      <created>1516373835731</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1516373835731</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1260" height="714" extended-state="0" />
+    <frame x="0" y="102" width="1260" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -355,7 +365,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.49671593" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.49671593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26272577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -384,7 +394,8 @@
     <MESSAGE value="finish &quot;TxHandler.java&quot;" />
     <MESSAGE value="finish &quot;TxHandler.java&quot; and add totalInput &gt;= totalOutput" />
     <MESSAGE value="add &quot;MaxFeeTxHandler&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;MaxFeeTxHandler&quot;" />
+    <MESSAGE value="edit &quot;MaxFeeTxHandler&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit &quot;MaxFeeTxHandler&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -420,9 +431,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1516373807635" expanded="true" signature="36617:36634" ph="..." />
-            <marker date="1516373807635" expanded="true" signature="36617:36652" ph="..." />
-            <marker date="1516373807635" expanded="true" signature="36617:36665" ph="..." />
+            <marker date="1516375191543" expanded="true" signature="37786:37803" ph="..." />
+            <marker date="1516375191543" expanded="true" signature="37786:37821" ph="..." />
+            <marker date="1516375191543" expanded="true" signature="37786:37834" ph="..." />
           </folding>
         </state>
       </provider>
@@ -458,7 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.java" />
     <entry file="file://$PROJECT_DIR$/../../cryptocurrency-course-materials-master/assignment1/src/Crypto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -506,7 +516,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#getAllUTXO#0;class#UTXOPool#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -514,7 +526,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -533,9 +547,9 @@
         <state relative-caret-position="-3678">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1516373807635" expanded="true" signature="36617:36634" ph="..." />
-            <marker date="1516373807635" expanded="true" signature="36617:36652" ph="..." />
-            <marker date="1516373807635" expanded="true" signature="36617:36665" ph="..." />
+            <marker date="1516375191543" expanded="true" signature="37786:37803" ph="..." />
+            <marker date="1516375191543" expanded="true" signature="37786:37821" ph="..." />
+            <marker date="1516375191543" expanded="true" signature="37786:37834" ph="..." />
           </folding>
         </state>
       </provider>
@@ -604,18 +618,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TxHandler.java">
+    <entry file="file://$PROJECT_DIR$/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-989">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="150">
+          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MaxFeeTxHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+        <state relative-caret-position="57">
+          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TxHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

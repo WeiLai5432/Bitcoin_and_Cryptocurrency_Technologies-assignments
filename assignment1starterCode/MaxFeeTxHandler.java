@@ -62,9 +62,12 @@ public class MaxFeeTxHandler {
         return totalInput >= totalOutput;
     }
 
-    private double txFee(Transaction tx){
+    public double txFee(Transaction tx){
         double totalInput = 0.0;
         double totalOutput = 0.0;
+        if (!isValidTx(tx)){
+            return 0.0;
+        }
         for (int i = 0; i < tx.numInputs(); i++){
             Transaction.Input inp = tx.getInput(i);
 //            Transaction.Output op = tx.getOutput(inp.outputIndex);
@@ -92,7 +95,7 @@ public class MaxFeeTxHandler {
                 if (feei < feej){
                     Transaction temp = possibleTxs[i];
                     possibleTxs[i] = possibleTxs[j];
-                    possibleTxs[i] = temp;
+                    possibleTxs[j] = temp;
                 }
             }
         }

@@ -50,8 +50,9 @@ public class TxHandler {
             if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
                 return false;
             }
-            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
-            totalInput += txoutput.value;
+//            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
+//            totalInput += txoutput.value;
+            totalInput += op.value;
         }
         for (int i = 0; i < tx.numOutputs(); i++){
             if (tx.getOutput(i).value < 0){
