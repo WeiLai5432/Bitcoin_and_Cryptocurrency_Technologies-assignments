@@ -50,8 +50,8 @@ public class MaxFeeTxHandler {
             if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
                 return false;
             }
-            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
-            totalInput += txoutput.value;
+//            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
+            totalInput += op.value;
         }
         for (int i = 0; i < tx.numOutputs(); i++){
             if (tx.getOutput(i).value < 0){
@@ -75,7 +75,7 @@ public class MaxFeeTxHandler {
         for (int i = 0; i < tx.numOutputs(); i++){
             totalOutput += tx.getOutput(i).value;
         }
-        return totalInput - totalOutput;
+        return (totalInput - totalOutput);
     }
 
     /**
@@ -85,7 +85,17 @@ public class MaxFeeTxHandler {
      */
     public Transaction[] handleTxs(Transaction[] possibleTxs) {
         // IMPLEMENT THIS
-
+        for (int i = 0; i < possibleTxs.length-1; i++){
+            for (int j = i; j < possibleTxs.length; j++){
+                double feei = txFee(possibleTxs[i]);
+                double feej = txFee(possibleTxs[j]);
+                if (feei < feej){
+                    Transaction temp = possibleTxs[i];
+                    possibleTxs[i] = possibleTxs[j];
+                    possibleTxs[i] = temp;
+                }
+            }
+        }
 
         Set<Transaction> validTxs = new HashSet<Transaction>();
         int cnt = 0;
@@ -109,17 +119,6 @@ public class MaxFeeTxHandler {
 //            result[i] = validTxs[i];
 //        }
         result = validTxs.toArray(result);
-        for (int i = 0; i < result.length-1; i++){
-            for (int j = i; j < result.length; j++){
-                double feei = txFee(result[i]);
-                double feej = txFee(result[j]);
-                if (feei < feej){
-                    Transaction temp = result[i];
-                    result[i] = possibleTxs[j];
-                    result[i] = temp;
-                }
-            }
-        }
         return result;
     }
 
