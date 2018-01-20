@@ -47,7 +47,7 @@ public class MaxFeeTxHandler {
             if (!utxoHashSet.add(ut)){
                 return false;
             }
-            if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
+            if (!op.address.verifySignature( tx.getRawDataToSign(i), inp.signature)){
                 return false;
             }
 //            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
@@ -69,7 +69,7 @@ public class MaxFeeTxHandler {
 //            Transaction.Input inp = tx.getInput(i);
 //            Transaction.Output op = tx.getOutput(inp.outputIndex);
             UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
-            if (!isValidTx(tx) || !utxoPool.contains(ut)){ // don't just return, here are somethings
+            if (!isValidTx(tx)){ // don't just return, here are somethings
                 continue;
             }
             Transaction.Output txoutput = utxoPool.getTxOutput(ut);
