@@ -65,8 +65,8 @@ public class MaxFeeTxHandler {
     public double txFee(Transaction tx){
         double totalInput = 0.0;
         double totalOutput = 0.0;
-        for (int i = 0; i < tx.numInputs(); i++){
-            Transaction.Input inp = tx.getInput(i);
+        for (Transaction.Input inp : tx.getInputs()){
+//            Transaction.Input inp = tx.getInput(i);
 //            Transaction.Output op = tx.getOutput(inp.outputIndex);
             UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
             if (!isValidTx(tx) || !utxoPool.contains(ut)){ // don't just return, here are somethings
@@ -75,8 +75,11 @@ public class MaxFeeTxHandler {
             Transaction.Output txoutput = utxoPool.getTxOutput(ut);
             totalInput += txoutput.value;
         }
-        for (int i = 0; i < tx.numOutputs(); i++){
-            totalOutput += tx.getOutput(i).value;
+//        for (int i = 0; i < tx.numOutputs(); i++){
+//            totalOutput += tx.getOutput(i).value;
+//        }
+        for (Transaction.Output oup : tx.getOutputs()){
+            totalOutput += oup.value;
         }
         return (totalInput - totalOutput);
     }
@@ -127,8 +130,8 @@ public class MaxFeeTxHandler {
 //        for (int i = 0; i < cnt ;i++){
 //            result[i] = validTxs[i];
 //        }
-        result = validTxs.toArray(result);
-        return result;
+//        result = validTxs.toArray(result);
+        return validTxs.toArray(result);
     }
 
 }

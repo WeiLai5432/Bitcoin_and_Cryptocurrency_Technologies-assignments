@@ -47,7 +47,8 @@ public class TxHandler {
             if (!utxoHashSet.add(ut)){
                 return false;
             }
-            if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
+//            if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
+            if (!op.address.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
                 return false;
             }
 //            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
