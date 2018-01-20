@@ -82,8 +82,8 @@
       <file leaf-file-name="MaxFeeTxHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MaxFeeTxHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="70" column="48" lean-forward="true" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+            <state relative-caret-position="145">
+              <caret line="71" column="81" lean-forward="false" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,9 +127,9 @@
             <state relative-caret-position="-3678">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1516457575659" expanded="true" signature="41097:41114" ph="..." />
-                <marker date="1516457575659" expanded="true" signature="41097:41132" ph="..." />
-                <marker date="1516457575659" expanded="true" signature="41097:41145" ph="..." />
+                <marker date="1516457659874" expanded="true" signature="41417:41434" ph="..." />
+                <marker date="1516457659874" expanded="true" signature="41417:41452" ph="..." />
+                <marker date="1516457659874" expanded="true" signature="41417:41465" ph="..." />
               </folding>
             </state>
           </provider>
@@ -395,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516375217332</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="no comment">
+      <created>1516457618908</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1516457618909</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -443,7 +450,8 @@
     <MESSAGE value="add &quot;MaxFeeTxHandler&quot;" />
     <MESSAGE value="edit &quot;MaxFeeTxHandler&quot;" />
     <MESSAGE value="Fix some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some bugs" />
+    <MESSAGE value="no comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="no comment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -479,9 +487,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1516457575659" expanded="true" signature="41097:41114" ph="..." />
-            <marker date="1516457575659" expanded="true" signature="41097:41132" ph="..." />
-            <marker date="1516457575659" expanded="true" signature="41097:41145" ph="..." />
+            <marker date="1516457659874" expanded="true" signature="41417:41434" ph="..." />
+            <marker date="1516457659874" expanded="true" signature="41417:41452" ph="..." />
+            <marker date="1516457659874" expanded="true" signature="41417:41465" ph="..." />
           </folding>
         </state>
       </provider>
@@ -595,9 +603,9 @@
         <state relative-caret-position="-3678">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1516457575659" expanded="true" signature="41097:41114" ph="..." />
-            <marker date="1516457575659" expanded="true" signature="41097:41132" ph="..." />
-            <marker date="1516457575659" expanded="true" signature="41097:41145" ph="..." />
+            <marker date="1516457659874" expanded="true" signature="41417:41434" ph="..." />
+            <marker date="1516457659874" expanded="true" signature="41417:41452" ph="..." />
+            <marker date="1516457659874" expanded="true" signature="41417:41465" ph="..." />
           </folding>
         </state>
       </provider>
@@ -685,8 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MaxFeeTxHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="70" column="48" lean-forward="true" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+        <state relative-caret-position="145">
+          <caret line="71" column="81" lean-forward="false" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
