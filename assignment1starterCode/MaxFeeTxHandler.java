@@ -47,7 +47,7 @@ public class MaxFeeTxHandler {
             if (!utxoHashSet.add(ut)){
                 return false;
             }
-            if (!op.address.verifySignature( tx.getRawDataToSign(i), inp.signature)){
+            if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
                 return false;
             }
 //            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
