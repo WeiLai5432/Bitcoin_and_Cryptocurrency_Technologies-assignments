@@ -102,7 +102,8 @@ public class MaxFeeTxHandler {
 
         Set<Transaction> validTxs = new HashSet<Transaction>();
         int cnt = 0;
-        for (Transaction tc : possibleTxs){
+        for (int ii = 0;ii < possibleTxs.length; ii++){
+            Transaction tc = possibleTxs[ii];
             if(isValidTx(tc)){
                 validTxs.add(tc);
                 cnt++;
@@ -110,14 +111,19 @@ public class MaxFeeTxHandler {
                     UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
                     utxoPool.removeUTXO(ut);
                 }
-                int i = 0;
-                for (Transaction.Output oup : tc.getOutputs()){
-                    UTXO ut = new UTXO(tc.getHash(), i++);
+//                int i = 0;
+//                for (Transaction.Output oup : tc.getOutputs()){
+//                    UTXO ut = new UTXO(tc.getHash(), i++);
+//                    utxoPool.addUTXO(ut, oup);
+//                }
+                for (int t = 0; t < tc.numOutputs(); t++){
+                    Transaction.Output oup = tc.getOutput(t);
+                    UTXO ut = new UTXO(tc.getHash(), t);
                     utxoPool.addUTXO(ut, oup);
                 }
             }
         }
-        Transaction[] result = new Transaction[cnt];
+        Transaction[] result = new Transaction[validTxs.size()];
 //        for (int i = 0; i < cnt ;i++){
 //            result[i] = validTxs[i];
 //        }

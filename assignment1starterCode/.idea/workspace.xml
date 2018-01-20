@@ -4,7 +4,6 @@
     <list default="true" id="aecb04bb-258d-4ff9-93f3-7312c81af9f2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/MaxFeeTxHandler.java" afterPath="$PROJECT_DIR$/MaxFeeTxHandler.java" />
-      <change beforePath="$PROJECT_DIR$/TxHandler.java" afterPath="$PROJECT_DIR$/TxHandler.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TxHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TxHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TxHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+            <state relative-caret-position="130">
+              <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,14 +48,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaxFeeTxHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55">
+              <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+              <folding>
+                <element signature="class#Input#0;class#Transaction#0" expanded="false" />
+                <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
+                <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
+                <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
+                <element signature="method#Input#0;class#Input#0;class#Transaction#0" expanded="false" />
+                <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
+                <element signature="class#Output#0;class#Transaction#0" expanded="false" />
+                <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
+                <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
+                <element signature="method#Output#0;class#Output#0;class#Transaction#0" expanded="false" />
+                <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
+                <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
+                <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
+                <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
+                <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
+                <element signature="method#removeInput#1;class#Transaction#0" expanded="false" />
+                <element signature="method#getRawDataToSign#0;class#Transaction#0" expanded="false" />
+                <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
+                <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
+                <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaxFeeTxHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MaxFeeTxHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+            <state relative-caret-position="204">
+              <caret line="70" column="48" lean-forward="true" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UTXO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UTXO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1185">
+              <caret line="83" column="48" lean-forward="false" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,9 +127,9 @@
             <state relative-caret-position="-3678">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1516375191543" expanded="true" signature="37786:37803" ph="..." />
-                <marker date="1516375191543" expanded="true" signature="37786:37821" ph="..." />
-                <marker date="1516375191543" expanded="true" signature="37786:37834" ph="..." />
+                <marker date="1516457575659" expanded="true" signature="41097:41114" ph="..." />
+                <marker date="1516457575659" expanded="true" signature="41097:41132" ph="..." />
+                <marker date="1516457575659" expanded="true" signature="41097:41145" ph="..." />
               </folding>
             </state>
           </provider>
@@ -128,7 +168,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="102" />
+    <option name="y" value="33" />
     <option name="width" value="1260" />
     <option name="height" value="714" />
   </component>
@@ -348,11 +388,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516373835731</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix some bugs">
+      <created>1516375217332</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1516375217332</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="102" width="1260" height="714" extended-state="0" />
+    <frame x="0" y="33" width="1260" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -395,7 +442,8 @@
     <MESSAGE value="finish &quot;TxHandler.java&quot; and add totalInput &gt;= totalOutput" />
     <MESSAGE value="add &quot;MaxFeeTxHandler&quot;" />
     <MESSAGE value="edit &quot;MaxFeeTxHandler&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit &quot;MaxFeeTxHandler&quot;" />
+    <MESSAGE value="Fix some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix some bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -431,9 +479,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1516375191543" expanded="true" signature="37786:37803" ph="..." />
-            <marker date="1516375191543" expanded="true" signature="37786:37821" ph="..." />
-            <marker date="1516375191543" expanded="true" signature="37786:37834" ph="..." />
+            <marker date="1516457575659" expanded="true" signature="41097:41114" ph="..." />
+            <marker date="1516457575659" expanded="true" signature="41097:41132" ph="..." />
+            <marker date="1516457575659" expanded="true" signature="41097:41145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -547,9 +595,9 @@
         <state relative-caret-position="-3678">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1516375191543" expanded="true" signature="37786:37803" ph="..." />
-            <marker date="1516375191543" expanded="true" signature="37786:37821" ph="..." />
-            <marker date="1516375191543" expanded="true" signature="37786:37834" ph="..." />
+            <marker date="1516457575659" expanded="true" signature="41097:41114" ph="..." />
+            <marker date="1516457575659" expanded="true" signature="41097:41132" ph="..." />
+            <marker date="1516457575659" expanded="true" signature="41097:41145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -559,44 +607,6 @@
         <state relative-caret-position="105">
           <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UTXO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="83" column="48" lean-forward="false" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Input#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
-            <element signature="class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Output#0;class#Output#0;class#Transaction#0" expanded="false" />
-            <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
-            <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
-            <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
-            <element signature="method#removeInput#1;class#Transaction#0" expanded="false" />
-            <element signature="method#getRawDataToSign#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
-            <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
-            <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,20 +636,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MaxFeeTxHandler.java">
+    <entry file="file://$PROJECT_DIR$/UTXO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+        <state relative-caret-position="1185">
+          <caret line="83" column="48" lean-forward="false" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#prevTxHash#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#outputIndex#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#signature#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Input#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="method#addSignature#0;class#Input#0;class#Transaction#0" expanded="false" />
+            <element signature="class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#value#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#address#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Output#0;class#Output#0;class#Transaction#0" expanded="false" />
+            <element signature="docComment;field#hash#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#0;class#Transaction#0" expanded="false" />
+            <element signature="method#Transaction#1;class#Transaction#0" expanded="false" />
+            <element signature="method#addInput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#addOutput#0;class#Transaction#0" expanded="false" />
+            <element signature="method#removeInput#1;class#Transaction#0" expanded="false" />
+            <element signature="method#getRawDataToSign#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getRawTx#0;class#Transaction#0" expanded="false" />
+            <element signature="method#finalize#0;class#Transaction#0" expanded="false" />
+            <element signature="method#getOutput#0;class#Transaction#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TxHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+        <state relative-caret-position="130">
+          <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MaxFeeTxHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="70" column="48" lean-forward="true" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
