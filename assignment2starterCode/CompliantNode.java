@@ -41,8 +41,9 @@ public class CompliantNode implements Node {
     public void receiveFromFollowees(Set<Candidate> candidates) {
         // IMPLEMENT THIS
         Set<Transaction> pdTransactions = new HashSet<>();
-        for (Candidate can : candidates){
+        for (Candidate can : candidates) {
             Transaction tx = can.tx;
             this.pendingTransactions.add(tx);
         }
+    }
 }
