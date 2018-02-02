@@ -11,6 +11,8 @@ public class CompliantNode implements Node {
 
     boolean[] followees;
 
+    boolean[] blacklist;
+
     Set<Transaction> pendingTransactions;
 
     public CompliantNode(double p_graph, double p_malicious, double p_txDistribution, int numRounds) {
@@ -41,8 +43,6 @@ public class CompliantNode implements Node {
         Set<Transaction> pdTransactions = new HashSet<>();
         for (Candidate can : candidates){
             Transaction tx = can.tx;
-            pdTransactions.add(tx);
+            this.pendingTransactions.add(tx);
         }
-        this.setPendingTransaction(pdTransactions);
-    }
 }
