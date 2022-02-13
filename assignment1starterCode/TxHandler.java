@@ -14,17 +14,18 @@ public class TxHandler {
      * {@code utxoPool}. This should make a copy of utxoPool by using the UTXOPool(UTXOPool uPool)
      * constructor.
      */
+
     private UTXOPool utxoPool;
 
     public TxHandler(UTXOPool utxoPool) {
         // IMPLEMENT THIS
-        this.utxoPool = utxoPool;
+        this.utxoPool = new UTXOPool(utxoPool);
     }
 
     /**
      * @return true if:
-     * (1) all outputs claimed by {@code tx} are in the current UTXO pool, 
-     * (2) the signatures on each input of {@code tx} are valid, 
+     * (1) all outputs claimed by {@code tx} are in the current UTXO pool,
+     * (2) the signatures on each input of {@code tx} are valid,
      * (3) no UTXO is claimed multiple times by {@code tx},
      * (4) all of {@code tx}s output values are non-negative, and
      * (5) the sum of {@code tx}s input values is greater than or equal to the sum of its output
@@ -32,36 +33,31 @@ public class TxHandler {
      */
     public boolean isValidTx(Transaction tx) {
         // IMPLEMENT THIS
-        HashSet<UTXO> utxoHashSet = new HashSet<>();
-        ArrayList<UTXO> allUTXO = utxoPool.getAllUTXO();
-        double totalInput = 0.0;
-        double totalOutput = 0.0;
-        for (int i = 0; i < tx.numInputs(); i++){
+        double totalInputs = 0;
+        double totalOutputs = 0;
+        Set<UTXO> used = new HashSet<UTXO>();
+        for (int i = 0; i < tx.numInputs(); i++) {
             Transaction.Input inp = tx.getInput(i);
-//            Transaction.Output op = tx.getOutput(inp.outputIndex);
             UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
-            Transaction.Output op = utxoPool.getTxOutput(ut);
-            if (!utxoPool.contains(ut)){
+            if(!utxoPool.contains(ut)) {
                 return false;
-            }
-            if (!utxoHashSet.add(ut)){
+            }  // check(1)
+            Transaction.Output out = utxoPool.getTxOutput(ut);
+            totalInputs += out.value;
+            if(!Crypto.verifySignature(out.address, tx.getRawDataToSign(i), inp.signature)) {
                 return false;
-            }
-//            if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
-            if (!Crypto.verifySignature( tx.getRawDataToSign(i), inp.signature)){
+            }  // check(2)
+            if(!used.add(ut)) {
                 return false;
-            }
-//            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
-//            totalInput += txoutput.value;
-            totalInput += op.value;
+            }  // check(3)
         }
-        for (int i = 0; i < tx.numOutputs(); i++){
-            if (tx.getOutput(i).value < 0){
+        for(Transaction.Output output: tx.getOutputs()) {
+            if(output.value < 0) {
                 return false;
-            }
-            totalOutput += tx.getOutput(i).value;
+            }  // check(4)
+            totalOutputs += output.value;
         }
-        return totalInput >= totalOutput;
+        return totalInputs >= totalOutputs;
     }
 
     /**
@@ -72,27 +68,24 @@ public class TxHandler {
     public Transaction[] handleTxs(Transaction[] possibleTxs) {
         // IMPLEMENT THIS
         Set<Transaction> validTxs = new HashSet<Transaction>();
-        int cnt = 0;
-        for (Transaction tc : possibleTxs){
-            if(isValidTx(tc)){
-                validTxs.add(tc);
-                cnt++;
-                for (Transaction.Input inp : tc.getInputs()){
+        boolean updated = true;
+        for(Transaction tx: possibleTxs) {
+            if(validTxs.contains(tx)) continue;
+            if(isValidTx(tx)) {
+                validTxs.add(tx);
+                updated = true;
+                for(Transaction.Input inp: tx.getInputs()) {
                     UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
                     utxoPool.removeUTXO(ut);
                 }
-                int i = 0;
-                for (Transaction.Output oup : tc.getOutputs()){
-                    UTXO ut = new UTXO(tc.getHash(), i++);
-                    utxoPool.addUTXO(ut, oup);
+                for(int i = 0 ; i < tx.numOutputs(); i++) {
+                    UTXO ut = new UTXO(tx.getHash(), i);
+                    utxoPool.addUTXO(ut, tx.getOutput(i));
                 }
             }
         }
-        Transaction[] result = new Transaction[cnt];
-//        for (int i = 0; i < cnt ;i++){
-//            result[i] = validTxs[i];
-//        }
-        return validTxs.toArray(result);
+        Transaction[] valid = new Transaction[validTxs.size()];
+        return validTxs.toArray(valid);
     }
 
 }

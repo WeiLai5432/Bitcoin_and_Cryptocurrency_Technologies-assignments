@@ -1,11 +1,6 @@
 import java.util.HashSet;
-import java.util.HashMap;
 import java.util.Set;
-import java.util.TreeSet;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.security.PublicKey;
 
 public class MaxFeeTxHandler {
 
@@ -14,11 +9,108 @@ public class MaxFeeTxHandler {
      * {@code utxoPool}. This should make a copy of utxoPool by using the UTXOPool(UTXOPool uPool)
      * constructor.
      */
+
     private UTXOPool utxoPool;
 
     public MaxFeeTxHandler(UTXOPool utxoPool) {
         // IMPLEMENT THIS
-        this.utxoPool = utxoPool;
+        this.utxoPool = new UTXOPool(utxoPool);
+    }
+
+    public boolean isValidTxImpl(Transaction tx, UTXOPool currentutxoPool) {
+        // IMPLEMENT THIS
+        double totalInputs = 0;
+        double totalOutputs = 0;
+        Set<UTXO> used = new HashSet<UTXO>();
+        for (int i = 0; i < tx.numInputs(); i++) {
+            Transaction.Input inp = tx.getInput(i);
+            UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
+            if(!currentutxoPool.contains(ut)) {
+                return false;
+            }  // check(1)
+            Transaction.Output out = currentutxoPool.getTxOutput(ut);
+            totalInputs += out.value;
+            if(!Crypto.verifySignature(out.address, tx.getRawDataToSign(i), inp.signature)) {
+                return false;
+            }  // check(2)
+            if(!used.add(ut)) {
+                return false;
+            }  // check(3)
+        }
+        for(Transaction.Output output: tx.getOutputs()) {
+            if(output.value < 0) {
+                return false;
+            }  // check(4)
+            totalOutputs += output.value;
+        }
+        return totalInputs >= totalOutputs;
+    }
+
+
+    double calcTxFees(Transaction tx, UTXOPool currentutxoPool) {
+        double totalInputs = 0;
+        double totalOutputs = 0;
+        Set<UTXO> used = new HashSet<UTXO>();
+        for (int i = 0; i < tx.numInputs(); i++) {
+            Transaction.Input inp = tx.getInput(i);
+            UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
+            if(!currentutxoPool.contains(ut)) {
+                return -1;
+            }  // check(1)
+            Transaction.Output out = currentutxoPool.getTxOutput(ut);
+            totalInputs += out.value;
+            if(!Crypto.verifySignature(out.address, tx.getRawDataToSign(i), inp.signature)) {
+                return -1;
+            }  // check(2)
+            if(!used.add(ut)) {
+                return -1;
+            }  // check(3)
+        }
+        for(Transaction.Output output: tx.getOutputs()) {
+            if(output.value < 0) {
+                return -1;
+            }  // check(4)
+            totalOutputs += output.value;
+        }
+        return totalInputs - totalOutputs;
+    }
+
+    private static void updatePool(Transaction tx, UTXOPool pool) {
+        for(Transaction.Input inp: tx.getInputs()) {
+            UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
+            pool.removeUTXO(ut);
+        }
+        for(int i = 0 ; i < tx.numOutputs(); i++) {
+            UTXO ut = new UTXO(tx.getHash(), i);
+            pool.addUTXO(ut, tx.getOutput(i));
+        }
+    }
+
+    private int[] currentList = new int[0];
+
+    private static int[] addIntoList(int[] list, int index) {
+        list  = Arrays.copyOf(list, list.length + 1);
+        list[list.length - 1] = index;
+        return list;
+    }
+
+    private double maxFees = 0.0;
+
+    private void dfsForTxs(UTXOPool pool, Transaction[] possibleTxs, int startIndex, int[] nowList, double fees) {
+        if(fees > maxFees) {
+            maxFees = fees;
+            currentList = nowList;
+        }
+
+        for(int i = startIndex; i < possibleTxs.length; i++) {
+            Transaction tx = possibleTxs[i];
+            double fee = calcTxFees(tx, pool);
+            if(fee >= 0) {
+                UTXOPool newPool = new UTXOPool(pool);
+                updatePool(tx, newPool);
+                dfsForTxs(newPool, possibleTxs, i+1, addIntoList(nowList, i), fees + fee);
+            }
+        }
     }
 
     /**
@@ -32,56 +124,7 @@ public class MaxFeeTxHandler {
      */
     public boolean isValidTx(Transaction tx) {
         // IMPLEMENT THIS
-        HashSet<UTXO> utxoHashSet = new HashSet<>();
-        ArrayList<UTXO> allUTXO = utxoPool.getAllUTXO();
-        double totalInput = 0.0;
-        double totalOutput = 0.0;
-        for (int i = 0; i < tx.numInputs(); i++){
-            Transaction.Input inp = tx.getInput(i);
-//            Transaction.Output op = tx.getOutput(inp.outputIndex);
-            UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
-            Transaction.Output op = utxoPool.getTxOutput(ut);
-            if (!utxoPool.contains(ut)){
-                return false;
-            }
-            if (!utxoHashSet.add(ut)){
-                return false;
-            }
-            if (!Crypto.verifySignature(op.address, tx.getRawDataToSign(i), inp.signature)){
-                return false;
-            }
-//            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
-            totalInput += op.value;
-        }
-        for (int i = 0; i < tx.numOutputs(); i++){
-            if (tx.getOutput(i).value < 0){
-                return false;
-            }
-            totalOutput += tx.getOutput(i).value;
-        }
-        return totalInput >= totalOutput;
-    }
-
-    public double txFee(Transaction tx){
-        double totalInput = 0.0;
-        double totalOutput = 0.0;
-        for (Transaction.Input inp : tx.getInputs()){
-//            Transaction.Input inp = tx.getInput(i);
-//            Transaction.Output op = tx.getOutput(inp.outputIndex);
-            UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
-            if (!isValidTx(tx)){ // don't just return, here are somethings
-                continue;
-            }
-            Transaction.Output txoutput = utxoPool.getTxOutput(ut);
-            totalInput += txoutput.value;
-        }
-//        for (int i = 0; i < tx.numOutputs(); i++){
-//            totalOutput += tx.getOutput(i).value;
-//        }
-        for (Transaction.Output oup : tx.getOutputs()){
-            totalOutput += oup.value;
-        }
-        return (totalInput - totalOutput);
+        return isValidTxImpl(tx, utxoPool);
     }
 
     /**
@@ -91,47 +134,13 @@ public class MaxFeeTxHandler {
      */
     public Transaction[] handleTxs(Transaction[] possibleTxs) {
         // IMPLEMENT THIS
-        for (int i = 0; i < possibleTxs.length-1; i++){
-            for (int j = i; j < possibleTxs.length; j++){
-                double feei = txFee(possibleTxs[i]);
-                double feej = txFee(possibleTxs[j]);
-                if (feei < feej){
-                    Transaction temp = possibleTxs[i];
-                    possibleTxs[i] = possibleTxs[j];
-                    possibleTxs[j] = temp;
-                }
-            }
+        dfsForTxs(utxoPool, possibleTxs, 0, currentList, 0);
+        Transaction[] valid = new Transaction[currentList.length];
+        for(int i = 0; i < currentList.length; i++) {
+            valid[i] = possibleTxs[currentList[i]];
         }
-
-        Set<Transaction> validTxs = new HashSet<Transaction>();
-        int cnt = 0;
-        for (int ii = 0;ii < possibleTxs.length; ii++){
-            Transaction tc = possibleTxs[ii];
-            if(isValidTx(tc)){
-                validTxs.add(tc);
-                cnt++;
-                for (Transaction.Input inp : tc.getInputs()){
-                    UTXO ut = new UTXO(inp.prevTxHash, inp.outputIndex);
-                    utxoPool.removeUTXO(ut);
-                }
-//                int i = 0;
-//                for (Transaction.Output oup : tc.getOutputs()){
-//                    UTXO ut = new UTXO(tc.getHash(), i++);
-//                    utxoPool.addUTXO(ut, oup);
-//                }
-                for (int t = 0; t < tc.numOutputs(); t++){
-                    Transaction.Output oup = tc.getOutput(t);
-                    UTXO ut = new UTXO(tc.getHash(), t);
-                    utxoPool.addUTXO(ut, oup);
-                }
-            }
-        }
-        Transaction[] result = new Transaction[validTxs.size()];
-//        for (int i = 0; i < cnt ;i++){
-//            result[i] = validTxs[i];
-//        }
-//        result = validTxs.toArray(result);
-        return validTxs.toArray(result);
+        return valid;
     }
 
 }
+
